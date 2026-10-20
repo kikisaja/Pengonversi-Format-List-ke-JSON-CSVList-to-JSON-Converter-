@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List to JSON Converter 💻</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-card">
+        <!-- Header -->
+        <header class="app-header">
+            <span class="badge">Saran No. 117</span>
+            <h1>💻 LIST TO JSON CONVERTER</h1>
+            <p>Ubah baris teks biasa menjadi format array JSON secara instan!</p>
+        </header>
+
+        <!-- Input Section -->
+        <div class="section-box">
+            <div class="section-header">
+                <label for="input-text">Daftar Teks / List (Satu item per baris):</label>
+                <button type="button" id="btn-load-sample" class="btn-sample">💡 Contoh</button>
+            </div>
+            <textarea id="input-text" placeholder="Apel&#10;Mangga&#10;Jeruk&#10;Pisang"></textarea>
+        </div>
+
+        <!-- Options Bar -->
+        <div class="options-bar">
+            <div class="option-group">
+                <label for="json-mode">Format JSON:</label>
+                <select id="json-mode">
+                    <option value="array-string">Array of Strings (["a", "b"])</option>
+                    <option value="array-object">Array of Objects ([{"item": "a"}])</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Output Section -->
+        <div class="section-box output-container">
+            <div class="section-header">
+                <label>Hasil JSON:</label>
+                <div class="output-actions">
+                    <button type="button" id="copy-btn" class="btn-action copy">📋 Salin JSON</button>
+                    <button type="button" id="download-btn" class="btn-action download">💾 Unduh .json</button>
+                </div>
+            </div>
+            <pre id="output-box"><code id="output-code">[
+  "Apel",
+  "Mangga",
+  "Jeruk",
+  "Pisang"
+]</code></pre>
+        </div>
+
+        <!-- Toast Notification -->
+        <div id="toast" class="toast hidden">Berhasil disalin ke clipboard! 🚀</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
